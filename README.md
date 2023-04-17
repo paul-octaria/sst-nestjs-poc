@@ -112,6 +112,7 @@ export default {
     return {
       name: "project-name",
       region: "us-west-2",
+      profile: 'helloWorld'
     };
   },
   stacks(app) {
@@ -122,12 +123,20 @@ export default {
           plugins: [esbuildDecorators()],
         },
         install: [
-          '@nestjs/websockets',
-          '@nestjs/microservices',
-          'cache-manager',
-          'class-transformer',
-          'class-validator',
-
+    "@anatine/esbuild-decorators",
+    "@nestjs/common",
+    "@nestjs/core",
+    "@nestjs/mapped-types",
+    "@nestjs/microservices",
+    "@nestjs/platform-express",
+    "@nestjs/websockets",
+    "@vendia/serverless-express",
+    "aws-lambda",
+    "cache-manager",
+    "class-transformer",
+    "class-validator",
+    "reflect-metadata",
+    "rxjs",
         ],
       }
     });
